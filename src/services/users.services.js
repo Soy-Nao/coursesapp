@@ -1,4 +1,5 @@
 const Users = require("../models/users.models");
+const Courses = require("../models/courses.model");
 
 // Obteniendo usuario por ID
 class UserServices {
@@ -7,7 +8,7 @@ class UserServices {
       const result = await Users.findOne({
         where: { id },
         attributes: {
-          exclude: ["password", "createAt", "updateAt"],
+          exclude: ["password", "createdAt", "updatedAt"],
         },
       });
       return result;

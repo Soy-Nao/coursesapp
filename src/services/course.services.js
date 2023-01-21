@@ -22,13 +22,13 @@ class CourseServices {
     try {
       const result = await Course.findAll({
         attributes: {
-          exclude: [ "createdAt", "updatedAt", 'categoryId']
+          exclude: [ "createdAt", "updatedAt", 'id']
         },
         include: [
           {
             model: CourseCategory,
             as: 'categorys',
-            attributes: ['categoryId'],
+            attributes: ['categoriesId'],
             include: {
                 model: Category,
                 as: 'category',
