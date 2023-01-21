@@ -17,15 +17,11 @@ const Videos = db.define("videos", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  course_id: {
+  coursesId: {
     type: DataTypes.INTEGER,
     allowNull: false,
-  },
-  categories_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
+    field: "course_id",
   }
-});
-
+})
 
 module.exports = Videos;

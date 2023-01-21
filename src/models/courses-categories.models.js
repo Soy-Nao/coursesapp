@@ -9,14 +9,19 @@ const CoursesCategories = db.define("courses-categories", {
         autoIncrement: true,
         allowNull: false,
     },
-    courses_id: {
+    coursesId: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        field: "courses_id",
     },
-    categories_id: {
+    categoriesId: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        field: "categories_id",
     }
+},
+{
+    timestamps: false,
 });
 
 
